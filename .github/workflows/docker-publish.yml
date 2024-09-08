@@ -14,7 +14,9 @@ jobs:
         uses: actions/checkout@v3  # 更新为 v3
 
       - name: Log in to GitHub Container Registry
-        run: echo "${{ secrets.GHCR_TOKEN }}" | docker login ghcr.io -u foolerhuan --password-stdin
+        env:
+          GHCR_TOKEN: ${{ secrets.GHCR_TOKEN }}
+        run: docker login ghcr.io -u foolerhuan --password $GHCR_TOKEN
 
       - name: Build Docker image
         run: docker build . -t ghcr.io/foolerhuan/coyeb-nodejs:latest
