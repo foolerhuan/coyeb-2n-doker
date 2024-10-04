@@ -5,11 +5,11 @@ const UUID = process.env.UUID || '103da8d8-27b0-4718-80d4-cef6df5f9c7b';
 const NEZHA_SERVER = process.env.NEZHA_SERVER || 'nz.abc.cn';     // 哪吒3个变量不全不运行
 const NEZHA_PORT = process.env.NEZHA_PORT || '5555';              // 哪吒端口为{443,8443,2096,2087,2083,2053}其中之一时开启tls
 const NEZHA_KEY = process.env.NEZHA_KEY || '';                    // 哪吒客户端密钥
-const ARGO_DOMAIN = process.env.ARGO_DOMAIN || '';                // 固定隧道域名，留空即启用临时隧道
-const ARGO_AUTH = process.env.ARGO_AUTH || '';                    // 固定隧道json或token，留空即启用临时隧道
+const ARGO_DOMAIN = process.env.ARGO_DOMAIN || 'coyeb-2nd.ct8.pp.ua';                // 固定隧道域名，留空即启用临时隧道
+const ARGO_AUTH = process.env.ARGO_AUTH || '{"AccountTag":"d433613ff8415c20c7464a1d7c69a601","TunnelSecret":"vgAEYzKwBntw/yZTwQikWYBCxI5cbYTGv4LLxEe5bhY=","TunnelID":"5ffc7212-8e8a-4a74-9247-7ea5a1eccbd6"}';                    // 固定隧道json或token，留空即启用临时隧道
 const CFIP = process.env.CFIP || 'government.se';                 // 优选域名或优选ip
 const CFPORT = process.env.CFPORT || 443;                         // 节点端口
-const NAME = process.env.NAME || 'Vls';                           // 节点名称
+const NAME = process.env.NAME || 'Coyeb-2nd';                           // 节点名称
 const ARGO_PORT = process.env.ARGO_PORT || 8080;                  // Argo端口，使用固定隧道token需和cf后台设置的端口对应
 const PORT = process.env.SERVER_PORT || process.env.PORT || 3000; // 节点订阅端口，若无法订阅请手动改为分配的端口
 
